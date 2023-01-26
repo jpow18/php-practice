@@ -9,6 +9,8 @@
 </head>
 <body>
   <?php
+  declare(strict_types=1);
+
     $name = "Jaes";
     $num = 45;
     $amount = 4;
