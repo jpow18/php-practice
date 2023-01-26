@@ -16,7 +16,9 @@
   ?>
   <h1>
     <?php 
-      var_dump(isset($pLanguages[0]));
+      echo '<pre>';
+      print_r($pLanguages);
+      echo '</pre>'
     ?>
   </h1>
 </body>
