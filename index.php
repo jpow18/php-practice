@@ -15,7 +15,7 @@
     $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
     $pLanguages['go'] = '1.15';
     $array = [1 => 'a', 2 => 'b', 'c', 999999 => 'd', 'f'];
-    unset($array[3]);
+    array_shift($array);
   ?>
   <h1>
     <?php 
