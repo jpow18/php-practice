@@ -1,3 +1,7 @@
+<?php
+    declare(strict_types=1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +13,9 @@
 </head>
 <body>
   <?php
-  declare(strict_types=1);
-
     $name = "Jaes";
     $num = 45;
+    $num2 = 34.2;
     $amount = 4;
     $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
     $pLanguages['go'] = '1.15';
@@ -21,14 +24,17 @@
     ], 'f'];
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
-    function foo(): mixed {
-      return ['a', 80];
+    function foo(int|float &$x, int|float $y): int|float {
+      if ($x % 3 == 0) 
+        $x /= 3;
+      return $x + $y;
     }
     
   ?>
   <h1>
     <?php 
-    var_dump(foo());
+
+    var_dump(foo($num, $num2));
     ?>
   </h1>
 </body>
