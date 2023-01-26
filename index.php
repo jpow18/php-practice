@@ -10,9 +10,7 @@
 </head>
 
 <body>
-  <header role="banner" class="brown">
-    <h1>Header</h1>
-  </header>
+  <?php require('./view/header.php') ?>
   <main class="tan">
     <h2>Body</h2>
     <p>This is the main content of the webpage. It is placed within a 'main' element to indicate its importance and increase accessibility for screen readers.</p>
