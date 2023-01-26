@@ -12,12 +12,13 @@
     $name = "Jaes";
     $num = 45;
     $amount = 4;
-    $pLanguages = ['PHP', 'Java', 'Python'];
+    $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
   ?>
   <h1>
     <?php 
       echo '<pre>';
-      print_r($pLanguages);
+      foreach ($pLanguages as $item)
+        print_r($item . "<br>");
       echo '</pre>'
     ?>
   </h1>
