@@ -19,7 +19,7 @@
     ], 'f'];
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
-    function foo(): int|string|array {
+    function foo(): mixed {
       return ['a', 80];
     }
     
