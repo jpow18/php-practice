@@ -9,14 +9,15 @@
 </head>
 <body>
   <?php
-    $name = "James";
+    $name = "Jaes";
+    $num = 45;
   ?>
   <h1>
-    <?php if ($name == "James"){
-      echo "Equal!";
-    } else {
-        echo "Not Equal!";
-    } ?>
+    <?php if (is_numeric($num) && $num > 80){ ?>
+        Equal!
+    <?php } else { ?>
+        Not Equal!
+    <?php } ?>
   </h1>
 </body>
 </html>
