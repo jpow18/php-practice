@@ -2,8 +2,8 @@
 print_r($_POST);
 print_r($_GET);
 $name = $_GET['name'];
+$name = filter_var($name, FILTER_SANITIZE_SPECIAL_CHARS);
 $email = $_GET['email'];
-echo $name . " " . $email;
 ?>
 
 <!DOCTYPE html>
