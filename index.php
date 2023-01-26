@@ -11,14 +11,10 @@
   <?php
     $name = "Jaes";
     $num = 45;
-    $amount = 46;
+    $amount = 4;
   ?>
   <h1>
-    <?php if (empty($amount)) {
-      $message = "amount is required.";
-      } else if (!is_numeric($amount)) {
-        $message = "amount must be numeric."; 
-      } else if ($amount <= 0) {
+    <?php if (empty($amount) || !is_numeric($amount) || $amount <= 0) {
         $message = "amount must be greater than 0.";
       } else {
         $message = "valid amount!";
