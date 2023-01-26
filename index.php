@@ -14,14 +14,16 @@
     $amount = 4;
     $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
     $pLanguages['go'] = '1.15';
-    $array = [1 => 'a', 2 => 'b', 'c', 999999 => 'd', 'f'];
-    array_shift($array);
+    $array = [1 => 'a', 2 => 'b', 'c', 6 => [
+      'python' => '8.0', 'C++' => '20'
+    ], 'f'];
+    $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
+    
   ?>
   <h1>
     <?php 
-      echo '<pre>';
-        print_r($array);
-      echo '</pre>'
+        print_r($array[6]['python']);
+        print_r($multiArray[3][1][1][2][0]);
     ?>
   </h1>
 </body>
