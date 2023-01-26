@@ -12,14 +12,11 @@
     $name = "Jaes";
     $num = 45;
     $amount = 4;
+    $pLanguages = ['PHP', 'Java', 'Python'];
   ?>
   <h1>
     <?php 
-      $counter = 0;
-      $arr = array("Rob", "Kimbo", "Slice", "Gerard");
-      foreach ($arr as $data) {
-        echo "My name is " . $data . "<br>";
-      }
+      var_dump(isset($pLanguages[0]));
     ?>
   </h1>
 </body>
