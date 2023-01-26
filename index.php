@@ -14,7 +14,7 @@
 <body>
   <?php
     $name = "Jaes";
-    $num = 45;
+    $num = 27;
     $num2 = 34.2;
     $amount = 4;
     $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
@@ -24,17 +24,20 @@
     ], 'f'];
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
-    function foo(int|float &$x, int|float $y): int|float {
-      if ($x % 3 == 0) 
-        $x /= 3;
-      return $x + $y;
+    function sum(...$numbers): int|float {
+      $sum = 0;
+
+      foreach($numbers as $number){
+        $sum += $number;
+      }
+      return $sum;
     }
     
   ?>
   <h1>
     <?php 
 
-    var_dump(foo($num, $num2));
+    var_dump(round(sum($num, $num2, 100, 23.1)));
     ?>
   </h1>
 </body>
