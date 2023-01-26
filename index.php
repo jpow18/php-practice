@@ -13,7 +13,7 @@
     $num = 45;
   ?>
   <h1>
-    <?php if (is_numeric($num) && $num > 80){ ?>
+    <?php if (!is_array($num) && !($num > 80)){ ?>
         Equal!
     <?php } else { ?>
         Not Equal!
