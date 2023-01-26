@@ -20,13 +20,17 @@
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
     function foo() {
-      echo "Hello world";
+      echo 'foo';
+      function bar() {
+        echo 'bar';
+      }
     }
     
   ?>
   <h1>
     <?php 
     foo();
+    bar();
     ?>
   </h1>
 </body>
