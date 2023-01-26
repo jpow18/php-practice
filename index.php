@@ -15,11 +15,14 @@
   ?>
   <h1>
     <?php 
-      $counter = 0;
-      while ($counter <= 5) {
-        echo $counter . "<br>";
-        $counter++;
+      $message = "";
+      for ($counter = 10; $counter >= 0; $counter--) {
+        if ($counter % 2 == 0)
+          $message .= $counter . "<br>";
+        else
+          $message .= $counter;
       }
+      echo $message;
     ?>
   </h1>
 </body>
