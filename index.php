@@ -19,18 +19,14 @@
     ], 'f'];
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
-    function foo() {
-      echo 'foo';
-      function bar() {
-        echo 'bar';
-      }
+    function foo(): int|string|array {
+      return ['a', 80];
     }
     
   ?>
   <h1>
     <?php 
-    foo();
-    bar();
+    var_dump(foo());
     ?>
   </h1>
 </body>
