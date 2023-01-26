@@ -18,12 +18,15 @@
       'python' => '8.0', 'C++' => '20'
     ], 'f'];
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
+
+    function foo() {
+      echo "Hello world";
+    }
     
   ?>
   <h1>
     <?php 
-        print_r($array[6]['python']);
-        print_r($multiArray[3][1][1][2][0]);
+    foo();
     ?>
   </h1>
 </body>
