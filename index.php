@@ -13,12 +13,14 @@
     $num = 45;
     $amount = 4;
     $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
+    $pLanguages['go'] = '1.15';
+    $array = [1 => 'a', 2 => 'b', 'c', 999999 => 'd', 'f'];
+    unset($array[3]);
   ?>
   <h1>
     <?php 
       echo '<pre>';
-      foreach ($pLanguages as $item)
-        print_r($item . "<br>");
+        print_r($array);
       echo '</pre>'
     ?>
   </h1>
