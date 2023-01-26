@@ -15,14 +15,12 @@
   ?>
   <h1>
     <?php 
-      $message = "";
-      for ($counter = 10; $counter >= 0; $counter--) {
-        if ($counter % 2 == 0)
-          $message .= $counter . "<br>";
-        else
-          $message .= $counter;
+      $counter = 0;
+      $arr = array("Rob", "Jimbo", "Slice", "Gerard");
+      while ($counter < count($arr)) {
+        echo $arr[$counter] . "<br>";
+        $counter++;
       }
-      echo $message;
     ?>
   </h1>
 </body>
