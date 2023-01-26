@@ -14,12 +14,13 @@
     $amount = 4;
   ?>
   <h1>
-    <?php if (empty($amount) || !is_numeric($amount) || $amount <= 0) {
-        $message = "amount must be greater than 0.";
-      } else {
-        $message = "valid amount!";
-      } ?>
-      <?php echo $message ?>
+    <?php 
+      $counter = 0;
+      while ($counter <= 5) {
+        echo $counter . "<br>";
+        $counter++;
+      }
+    ?>
   </h1>
 </body>
 </html>
