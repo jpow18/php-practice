@@ -11,13 +11,19 @@
   <?php
     $name = "Jaes";
     $num = 45;
+    $amount = 46;
   ?>
   <h1>
-    <?php if (!is_array($num) && !($num > 80)){ ?>
-        Equal!
-    <?php } else { ?>
-        Not Equal!
-    <?php } ?>
+    <?php if (empty($amount)) {
+      $message = "amount is required.";
+      } else if (!is_numeric($amount)) {
+        $message = "amount must be numeric."; 
+      } else if ($amount <= 0) {
+        $message = "amount must be greater than 0.";
+      } else {
+        $message = "valid amount!";
+      } ?>
+      <?php echo $message ?>
   </h1>
 </body>
 </html>
