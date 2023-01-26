@@ -1,9 +1,14 @@
 <?php
-    declare(strict_types=1);
+print_r($_POST);
+print_r($_GET);
+$name = $_GET['name'];
+$email = $_GET['email'];
+echo $name . " " . $email;
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,29 +16,28 @@
   <title>PHP Practice</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <?php
-    $name = "Jaes";
-    $num = 27;
-    $num2 = 34.2;
-    $amount = 4;
-    $pLanguages = ['php' => '8.0.26', 'python' => '3.10.0b5'];
-    $pLanguages['go'] = '1.15';
-    $array = [1 => 'a', 2 => 'b', 'c', 6 => [
-      'python' => '8.0', 'C++' => '20'
-    ], 'f'];
-    $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
+  <h1>Web Form Processor</h1>
+  <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="get">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
 
-    function sum(...$numbers): int|float {
-      return array_sum($numbers);
-    }
-    
-  ?>
-  <h1>
-    <?php 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
 
-    var_dump(round(sum($num, $num2, 100, 23.1, 100)));
-    ?>
-  </h1>
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject"><br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea><br><br>
+
+    <div class="buttons">
+      <button type="submit">Submit</button>
+      <button type="submit" formmethod="post">Submit using POST</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
 </body>
+
 </html>
