@@ -25,19 +25,14 @@
     $multiArray = [1, 4, 8, [6, [5, [789, 9, [ 'Heloo']]], 9, '2']];
 
     function sum(...$numbers): int|float {
-      $sum = 0;
-
-      foreach($numbers as $number){
-        $sum += $number;
-      }
-      return $sum;
+      return array_sum($numbers);
     }
     
   ?>
   <h1>
     <?php 
 
-    var_dump(round(sum($num, $num2, 100, 23.1)));
+    var_dump(round(sum($num, $num2, 100, 23.1, 100)));
     ?>
   </h1>
 </body>
