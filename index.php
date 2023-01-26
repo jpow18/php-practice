@@ -16,10 +16,9 @@
   <h1>
     <?php 
       $counter = 0;
-      $arr = array("Rob", "Jimbo", "Slice", "Gerard");
-      while ($counter < count($arr)) {
-        echo $arr[$counter] . "<br>";
-        $counter++;
+      $arr = array("Rob", "Kimbo", "Slice", "Gerard");
+      foreach ($arr as $data) {
+        echo "My name is " . $data . "<br>";
       }
     ?>
   </h1>
