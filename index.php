@@ -15,9 +15,7 @@
     <h2>Body</h2>
     <p>This is the main content of the webpage. It is placed within a 'main' element to indicate its importance and increase accessibility for screen readers.</p>
   </main>
-  <footer role="contentinfo" class="brown">
-    <h3>Footer</h3>
-  </footer>
+  <?php include('./view/footer.php') ?>
 </body>
 
 </html>
